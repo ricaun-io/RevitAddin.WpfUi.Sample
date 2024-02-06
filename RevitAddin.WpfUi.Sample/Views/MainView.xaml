@@ -13,7 +13,7 @@
     <StackPanel>
         <ui:TitleBar Title="WPF UI" />
         <ui:Card Margin="8">
-            <ui:Button Content="Hello World"
+            <ui:Button Content="Change Theme"
                        Command="{Binding CommandChangeTheme}"
                        Icon="{ui:SymbolIcon Fluent24}" />
         </ui:Card>
