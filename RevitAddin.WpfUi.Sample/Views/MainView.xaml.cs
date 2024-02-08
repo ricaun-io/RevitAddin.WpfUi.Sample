@@ -39,6 +39,8 @@ namespace RevitAddin.WpfUi.Sample.Views
             //this.SizeToContent = SizeToContent.WidthAndHeight;
             this.ShowInTaskbar = false;
             //this.ResizeMode = ResizeMode.NoResize;
+            this.Height = 320;
+            this.Width = 480;
             this.MinHeight = 160;
             this.MinWidth = 200;
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
