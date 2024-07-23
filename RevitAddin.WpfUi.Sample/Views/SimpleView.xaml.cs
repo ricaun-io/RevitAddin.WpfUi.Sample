@@ -5,11 +5,11 @@ using Wpf.Ui.Appearance;
 
 namespace RevitAddin.WpfUi.Sample.Views
 {
-    public partial class MainView
+    public partial class SimpleView : Window
     {
         public IRelayCommand CommandChangeTheme { get; private set; }
 
-        public MainView()
+        public SimpleView()
         {
             CommandChangeTheme = new RelayCommand(() =>
             {
