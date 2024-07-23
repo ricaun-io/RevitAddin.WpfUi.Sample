@@ -26,6 +26,14 @@ namespace RevitAddin.WpfUi.Sample.Views
             {
                 ApplicationThemeManager.Changed -= ApplicationThemeManager_Changed;
             };
+
+            this.KeyDown += (s, e) =>
+            {
+                if (e.Key == System.Windows.Input.Key.Escape)
+                {
+                    this.Close();
+                }
+            };
         }
 
         private void ApplicationThemeManager_Changed(ApplicationTheme currentApplicationTheme, System.Windows.Media.Color systemAccent)
@@ -36,9 +44,9 @@ namespace RevitAddin.WpfUi.Sample.Views
         #region InitializeWindow
         private void InitializeWindow()
         {
-            //this.SizeToContent = SizeToContent.WidthAndHeight;
             this.ShowInTaskbar = false;
-            //this.ResizeMode = ResizeMode.NoResize;
+            this.Height = 320;
+            this.Width = 480;
             this.MinHeight = 160;
             this.MinWidth = 200;
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;

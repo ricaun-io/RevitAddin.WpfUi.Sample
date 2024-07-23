@@ -11,15 +11,21 @@ namespace RevitAddin.WpfUi.Sample.Revit
         private static RibbonPanel ribbonPanel;
         public Result OnStartup(UIControlledApplication application)
         {
-            ribbonPanel = application.CreatePanel("RevitAddin.WpfUi.Sample");
-            ribbonPanel.CreatePushButton<Commands.Command>()
+            ribbonPanel = application.CreatePanel("WpfUi");
+
+            ribbonPanel.CreatePushButton<Commands.Command>("Main")
                 .SetLargeImage("Resources/Revit.ico");
+
+            ribbonPanel.CreatePushButton<Commands.CommandSimple>("Simple")
+                .SetLargeImage("Resources/Revit.ico");
+
             return Result.Succeeded;
         }
 
         public Result OnShutdown(UIControlledApplication application)
         {
             ribbonPanel?.Remove();
+
             return Result.Succeeded;
         }
     }

@@ -8,9 +8,7 @@
     <LangVersion>latest</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-    <Configurations>
-      Debug; Release;
-    </Configurations>
+    <Configurations>2019;Debug 2019;2025;Debug 2025</Configurations>
   </PropertyGroup>
 
   <!-- RevitVersion -->
@@ -63,6 +61,12 @@
         <TargetFramework>net48</TargetFramework>
       </PropertyGroup>
     </When>
+    <When Condition="$(Configuration.Contains('2025'))">
+      <PropertyGroup>
+        <RevitVersion>2025</RevitVersion>
+        <TargetFramework>net8.0-windows</TargetFramework>
+      </PropertyGroup>
+    </When>
     <Otherwise>
       <PropertyGroup>
         <RevitVersion>2019</RevitVersion>
@@ -70,6 +74,13 @@
       </PropertyGroup>
     </Otherwise>
   </Choose>
+
+  <!-- Net Core -->
+  <PropertyGroup Condition="!$(TargetFramework.StartsWith('net4'))">
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
 
   <!-- Release -->
   <PropertyGroup Condition="!$(Configuration.Contains('Debug'))">
@@ -97,7 +108,7 @@
 
   <PropertyGroup>
     <PackageId>RevitAddin.WpfUi.Sample</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <ProjectGuid>{37164B47-E455-436D-8D8D-1F02B7A2B688}</ProjectGuid>
   </PropertyGroup>
 
@@ -151,7 +162,7 @@
 
   <ItemGroup>
     <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*" IncludeAssets="build; compile" PrivateAssets="All" />
-    <PackageReference Include="WPF-UI" Version="3.0.0" />
+    <PackageReference Include="REVIT-WPF-UI" Version="3.0.4" />
   </ItemGroup>
 
 </Project>
