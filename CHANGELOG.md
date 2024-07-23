@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Support Revit 2025
 - Add `nuget.config` with local `References`
 - Add `SimpleView` without `ui:FluentWindow`
+- Add `REVIT-WPF-UI` package.
 
 ## [1.0.0] / 2024-02-06
 - First Release
