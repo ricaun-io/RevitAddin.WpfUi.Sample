@@ -47,7 +47,7 @@ Use `ui:FluentWindow` to enable the Fluent Design in the `Window`.
 
 Video in English about this project.
 
-[![VideoIma1]][Video1]
+[![VideoIma1]][Video1] [![VideoIma2]][Video2]
 
 ## Installation
 
@@ -63,3 +63,5 @@ Do you like this project? Please [star this project on GitHub](../../stargazers)
 
 [Video1]: https://youtu.be/Ymwm8QMb6Ow
 [VideoIma1]: https://img.youtube.com/vi/Ymwm8QMb6Ow/mqdefault.jpg
+[Video2]: https://youtu.be/s9KEa0_GUlw
+[VideoIma2]: https://img.youtube.com/vi/s9KEa0_GUlw/mqdefault.jpg
