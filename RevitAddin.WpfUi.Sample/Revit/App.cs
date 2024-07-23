@@ -2,8 +2,6 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using ricaun.Revit.UI;
 using System;
-using System.Collections.Generic;
-using System.Windows;
 
 namespace RevitAddin.WpfUi.Sample.Revit
 {
@@ -23,8 +21,6 @@ namespace RevitAddin.WpfUi.Sample.Revit
 
             return Result.Succeeded;
         }
-
-        private List<ResourceDictionary> ResourcesDictionaries = new List<ResourceDictionary>();
 
         public Result OnShutdown(UIControlledApplication application)
         {
